@@ -6,7 +6,7 @@ import Image from "next/image";
 import room from "../../../public/room.jpeg";
 import long from "../../../public/long.jpeg";
 
-export default function index() {
+export default function ZoomParallax() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -55,7 +55,11 @@ export default function index() {
       <div className={style.sticky}>
         {pictuers.map((item, index) => {
           return (
-            <motion.div style={{ scale: item.scale }} className={style.el}>
+            <motion.div
+              style={{ scale: item.scale }}
+              className={style.el}
+              key={index}
+            >
               <div className={style.imageContainer}>
                 <Image src={item.src} alt="image" fill />
               </div>

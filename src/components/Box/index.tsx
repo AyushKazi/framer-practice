@@ -1,20 +1,20 @@
 "use client";
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 
 export default function Box() {
   const ref = useRef(null);
 
   const isInView = useInView(ref, { once: true });
-  const list = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.5 } },
-  };
+  //   const list = {
+  //     hidden: { opacity: 0 },
+  //     visible: { opacity: 1, transition: { staggerChildren: 0.5 } },
+  //   };
 
-  const item = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
+  //   const item = {
+  //     hidden: { opacity: 0 },
+  //     visible: { opacity: 1 },
+  //   };
   return (
     <div
       ref={ref}
