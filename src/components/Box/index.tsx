@@ -1,6 +1,6 @@
-"use client";
+// "use client";
 import React, { useRef } from "react";
-import { useInView } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 
 export default function Box() {
   const ref = useRef(null);
@@ -15,11 +15,12 @@ export default function Box() {
   //     hidden: { opacity: 0 },
   //     visible: { opacity: 1 },
   //   };
+
   return (
     <div
       ref={ref}
       style={{
-        transform: isInView ? "none" : "translateX(-100px)",
+        transform: isInView ? "none" : "translateX(-200px)",
         opacity: isInView ? 1 : 0,
         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
       }}
